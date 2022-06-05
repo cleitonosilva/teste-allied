@@ -1,0 +1,44 @@
+@use '../../theme/styles/variables' as var;
+
+
+.formulario{
+  padding: var.$space-xl;
+  display: flex;
+  justify-content: center;
+
+  &__internal {
+    width: 500px;
+    height:auto;
+    color: var.$title;
+    border: 1px solid;
+
+    div{
+      width:960px;
+      margin-bottom: 20px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+
+      label{
+        margin-right: 10px;
+
+      }
+
+      input{
+        height: 30px;
+        width: 50%;
+
+      }
+
+      button{
+        height: 30px;
+        width: 90px;
+
+      }
+
+
+    }
+  }
+
+
+}

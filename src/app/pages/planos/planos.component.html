@@ -1,0 +1,23 @@
+<section>
+  <div class="planos">
+    <h2 class="planos__titulo">Selecione uma plano: </h2>
+    <div class="planos__container">
+      <div
+        *ngFor="let plano of planos"
+        class="planos__detalhes"
+        (click)="selecionarPlano(plano)"
+        [ngClass]="{'disabled': plano.ativo == false}">
+        <h6 class="planos__detalhes__titulo">Franquia: <span>{{ plano.franquia }}</span></h6>
+        <p class="planos__detalhes__texto">R$ {{ plano.valor }} </p>
+        <p *ngIf="plano.ativo == false">indisponível</p>
+        <div *ngIf="plano.aparelho">
+          <h6 class="planos__detalhes__titulo">+ {{ plano.aparelho.nome }}</h6>
+          <p class="planos__detalhes__texto">R$ {{ plano.aparelho.valor }}</p>
+          <div *ngIf="plano.aparelho.numeroParcelas > 1">
+            <p class="planos__detalhes__texto">Ou {{ plano.aparelho.numeroParcelas }}x de R$ {{ plano.aparelho.valorParcela }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

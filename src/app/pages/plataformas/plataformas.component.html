@@ -1,0 +1,14 @@
+<section>
+  <div class="plataformas">
+    <h2 class="plataformas__titulo">Selecione uma plataforma: </h2>
+    <div class="plataformas__container">
+      <div
+        *ngFor="let plataforma of plataformas"
+        class="plataformas__detalhes"
+        (click)="selecionarPlataforma(plataforma)">
+        <h6 class="plataformas__detalhes__titulo">Plataforma: <span>{{ plataforma.nome }}</span></h6>
+        <p class="plataformas__detalhes__texto">{{ plataforma.descricao }} </p>
+      </div>
+    </div>
+  </div>
+</section>

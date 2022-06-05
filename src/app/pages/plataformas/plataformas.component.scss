@@ -1,0 +1,62 @@
+@use '../../theme/styles/variables' as var;
+
+.plataformas {
+  border-radius: 15px;
+  padding: var.$space-lg;
+
+  &__container {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__titulo {
+    font-size: var.$font-xl;
+    color: var.$title;
+  }
+
+  &__detalhes {
+    padding: var.$space-md;
+    border: 2px solid var.$shape-details;
+    cursor: pointer;
+    margin: var.$space-md 0;
+    border-radius: 8px;
+
+    &:hover {
+      background: var.$hover-bg;
+
+      span {
+        color: var.$background;
+      }
+    }
+
+    &__titulo {
+      font-size: var.$font-xl;
+      margin-bottom: var.$space-sm;
+      font-weight: normal;
+
+      span {
+        color: var.$title;
+        font-weight: bold;
+      }
+    }
+
+    &__text {
+      opacity: 0.8;
+    }
+
+    &--selecionado {
+      border: 2px solid var.$primary;
+
+      .selecionado {
+        color: var.$primary-light;
+        float: right;
+      }
+    }
+
+
+  }
+}
+
+
+
+

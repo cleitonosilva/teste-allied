@@ -1,0 +1,15 @@
+@use '../../theme/styles/variables' as var;
+
+.header{
+  text-align: center;
+  padding: var.$space-xl;
+
+  &__titulo {
+    color: var.$title;
+  }
+
+  &__texto {
+    margin-top: var.$main-text;
+    opacity: 0.8;
+  }
+}

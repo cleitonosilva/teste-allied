@@ -1,0 +1,7 @@
+@use './theme/styles/variables' as var;
+
+.container{
+  max-width: min(90vw, 1200px);
+  margin: auto;
+  //background-color: var.$background;
+}
