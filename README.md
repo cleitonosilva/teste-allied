@@ -1,27 +1,70 @@
-# TesteAllied
+<h1 align="center">
+        Teste Allied. 
+</h1>
+<h1>
+    <img src="src\assets\testeAllied.png">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+</h1>
 
-## Development server
+# Sobre
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O projeto de teste **Planos e Plataformas** é uma aplicação de consulta dos planos e seus respectivos detalhes, onde é possível verificar nos detalhes os valores de aparelhos e mensalidades, se inscrever no formulário e verificar os dados selecionados.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Fonte 
 
-## Build
+https://teste-js.alliedtech.com.br/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Api's Utilizadas
 
-## Running unit tests
+http://private-59658d-celulardireto2017.apiary-mock.com/plataformas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+http://private-59658d-celulardireto2017.apiary-mock.com/planos/TBT01 
 
-## Running end-to-end tests
+http://private-59658d-celulardireto2017.apiary-mock.com/planos/CPT02 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+http://private-59658d-celulardireto2017.apiary-mock.com/planos/WF03 
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Tecnologias utilizadas
+
+O projeto foi desenvolvido com as seguintes tecnologias:
+- Angular 
+
+
+# Resumo 
+
+O desenvolvimento desse projeto, está contando com o uso de ferramentas de serviços, modularização, componentização, lazy load, continuação de dados. Utilizando a filosofia de arquitetura SCSS utilizei o metódo BEM - Bloco (Block), Elemento (Element) e Modificador (Modifier) deixando a aplicação otimizada para as manutenções e mantendo um código limpo e organizado. 
+
+
+O úsuario deve escolher um plano na plataforma para acessar o seus detalhes como (valor de plano, valor de aparelhos se disponível no plano, condições de pagamentos ) o usúario consegue se cadastrar e conferir as informações escolhidas desde o primeiro passo na aplicação. 
+
+# Como baixar o projeto 
+
+```bash
+
+# clonar o repositório 
+$ https://github.com/cleitonosilva/teste-allied
+
+# entrar no diretório 
+
+$ cd teste-allied
+
+# instalar as dependências 
+
+$ npm install 
+
+# iniciar o projeto
+
+$ ng serve 
+
+
+```
+
+
+# Contato
+Desenvolvido por Cleiton Oliveira
+- telefone: 21 - 964099980
+- emails: cleiton.o.dev@gmail.com / cleiton.logistica@outlook.com
+- LinkedIn: https://www.linkedin.com/in/cleiton-silva-8637b983/
+

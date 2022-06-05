@@ -13,8 +13,7 @@
     border: 1px solid;
 
     div{
-      width:960px;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -25,19 +24,39 @@
       }
 
       input{
-        height: 30px;
-        width: 50%;
+        height: 36px;
+      }
+
+      .button-valid{
+        height: 40px;
+        width: 90px;
+        background: var.$shape-details;
+        color: var.$background;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+        &:hover{
+          filter: brightness(0.7);
+        }
 
       }
 
       button{
-        height: 30px;
-        width: 90px;
-
+        &:disabled{
+          height: 40px;
+          width: 90px;
+          background: var.$shape-details;
+          color: var.$background;
+          font-weight: bold;
+          font-size: 1.1rem;
+          filter: brightness(0.4);
+        }
       }
 
 
     }
+
+
   }
 
 

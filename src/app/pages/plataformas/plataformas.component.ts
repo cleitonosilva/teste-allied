@@ -14,16 +14,12 @@ export class PlataformasComponent implements OnInit {
 
   constructor(
     private plainService: PlainService,
-    private router: Router,
-    private toastr: ToastrService ) { }
+    private router: Router ) { }
 
   ngOnInit(): void {
     this.initializer();
   }
 
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
-  }
 
   initializer(){
     this.plainService.getPlataformas().subscribe((res: Plataforma[]) => {

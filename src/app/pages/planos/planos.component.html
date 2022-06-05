@@ -9,7 +9,7 @@
         [ngClass]="{'disabled': plano.ativo == false}">
         <h6 class="planos__detalhes__titulo">Franquia: <span>{{ plano.franquia }}</span></h6>
         <p class="planos__detalhes__texto">R$ {{ plano.valor }} </p>
-        <p *ngIf="plano.ativo == false">indisponível</p>
+        <p class="planos__detalhes__indisponivel" *ngIf="plano.ativo == false">indisponível</p>
         <div *ngIf="plano.aparelho">
           <h6 class="planos__detalhes__titulo">+ {{ plano.aparelho.nome }}</h6>
           <p class="planos__detalhes__texto">R$ {{ plano.aparelho.valor }}</p>

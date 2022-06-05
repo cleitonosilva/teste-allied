@@ -1,12 +1,11 @@
-
-
 <div class="formulario">
-
-  <form *ngIf="formulario" [formGroup]="formulario" class="formulario__internal">
-    <div >
-      <label for="inputNome">
-        Nome: <span>*</span>
-      </label>
+  <form
+    *ngIf="formulario"
+    [formGroup]="formulario"
+    class="formulario__internal"
+  >
+    <div>
+      <label for="inputNome"> Nome: <span>*</span> </label>
       <input
         type="text"
         class="form-control"
@@ -14,11 +13,13 @@
         placeholder="Nome"
       />
     </div>
+    <div *ngIf="formulario.controls['nome']?.invalid">
+      <p *ngIf="formulario.controls['nome']?.touched">*Nome Obrigatório</p>
+      <p *ngIf="formulario.controls['nome']?.dirty">*Campo Obrigatório</p>
+    </div>
 
     <div>
-      <label for="inputEmail">
-        Email: <span>*</span>
-      </label>
+      <label for="inputEmail"> Email: <span>*</span> </label>
       <input
         type="email"
         class="form-control"
@@ -26,54 +27,76 @@
         placeholder="Email"
       />
     </div>
+    <div *ngIf="formulario.controls['email']?.invalid">
+      <p *ngIf="formulario.controls['email']?.touched">*Email Obrigatório</p>
+      <p *ngIf="formulario.controls['email']?.dirty">*Campo Obrigatório</p>
+    </div>
 
     <div>
-      <label for="inputCPF" class="col-form-label"
-      >CPF: <span>*</span>
-      </label>
+      <label for="inputCPF" class="col-form-label">CPF: <span>*</span> </label>
       <input
-      type="text"
-      class="form-control"
-      formControlName="cpf"
-      placeholder=" CPF"
-      mask="000.000.000-00"
-    />
-
+        type="text"
+        class="form-control"
+        formControlName="cpf"
+        placeholder=" CPF"
+        mask="000.000.000-00"
+      />
+    </div>
+    <div *ngIf="formulario.controls['cpf']?.invalid">
+      <p *ngIf="formulario.controls['cpf']?.touched">*CPF Obrigatório</p>
+      <p *ngIf="formulario.controls['cpf']?.dirty">*Campo Obrigatório</p>
     </div>
 
     <div>
       <label for="inputDataNascimento" class="col-form-label"
-      >Data de Nascimento: <span>*</span>
+        >Data de Nascimento: <span>*</span>
       </label>
       <input
-      type="text"
-      class="form-control"
-      formControlName="dataNascimento"
-      placeholder=" Data de nascimento"
-      mask="00/00/0000"
-    />
+        type="text"
+        class="form-control"
+        formControlName="dataNascimento"
+        placeholder=" Data de nascimento"
+        mask="00/00/0000"
+      />
+    </div>
+
+    <div *ngIf="formulario.controls['dataNascimento']?.invalid">
+      <p *ngIf="formulario.controls['dataNascimento']?.touched">
+        *Data Nascimento Obrigatório
+      </p>
+      <p *ngIf="formulario.controls['dataNascimento']?.dirty">
+        *Campo Obrigatório
+      </p>
     </div>
 
     <div>
       <label for="inputTelefone" class="col-form-label"
-      >Telefone: <span>*</span>
+        >Telefone: <span>*</span>
       </label>
       <input
-      type="text"
-      class="form-control"
-      formControlName="telefone"
-      placeholder=" Telefone"
-      mask="(00) 0 0000-0000"
-    />
+        type="text"
+        class="form-control"
+        formControlName="telefone"
+        placeholder=" Telefone"
+        mask="(00) 0 0000-0000"
+      />
+    </div>
+
+    <div *ngIf="formulario.controls['telefone']?.invalid">
+      <p *ngIf="formulario.controls['telefone']?.touched">
+        *Telefone Obrigatório
+      </p>
+      <p *ngIf="formulario.controls['telefone']?.dirty">*Campo Obrigatório</p>
     </div>
 
     <div>
-
-      <button (click)="enviarFormulario()" [disabled]="!formulario.valid">enviar</button>
-
+      <button
+        (click)="enviarFormulario()"
+        [disabled]="!formulario.valid"
+        [ngClass]="{ 'button-valid': formulario.valid }"
+      >
+        enviar
+      </button>
     </div>
-
-
   </form>
-
 </div>
