@@ -12,10 +12,10 @@
         formControlName="nome"
         placeholder="Nome"
       />
-    </div>
-    <div *ngIf="formulario.controls['nome']?.invalid">
-      <p *ngIf="formulario.controls['nome']?.touched">*Nome Obrigatório</p>
-      <p *ngIf="formulario.controls['nome']?.dirty">*Campo Obrigatório</p>
+      <ng-container *ngIf="formulario.controls['nome']?.invalid">
+        <small *ngIf="formulario.controls['nome']?.touched">*Nome Obrigatório</small>
+        <small *ngIf="formulario.controls['nome']?.dirty">*Campo Obrigatório</small>
+      </ng-container>
     </div>
 
     <div>
@@ -26,14 +26,14 @@
         formControlName="email"
         placeholder="Email"
       />
-    </div>
-    <div *ngIf="formulario.controls['email']?.invalid">
-      <p *ngIf="formulario.controls['email']?.touched">*Email Obrigatório</p>
-      <p *ngIf="formulario.controls['email']?.dirty">*Campo Obrigatório</p>
+      <ng-container *ngIf="formulario.controls['email']?.invalid">
+        <small *ngIf="formulario.controls['email']?.touched">*Email Obrigatório</small>
+        <small *ngIf="formulario.controls['email']?.dirty">*Campo Obrigatório</small>
+      </ng-container>
     </div>
 
     <div>
-      <label for="inputCPF" class="col-form-label">CPF: <span>*</span> </label>
+      <label for="inputCPF" >CPF: <span>*</span> </label>
       <input
         type="text"
         class="form-control"
@@ -41,14 +41,14 @@
         placeholder=" CPF"
         mask="000.000.000-00"
       />
-    </div>
-    <div *ngIf="formulario.controls['cpf']?.invalid">
-      <p *ngIf="formulario.controls['cpf']?.touched">*CPF Obrigatório</p>
-      <p *ngIf="formulario.controls['cpf']?.dirty">*Campo Obrigatório</p>
+      <ng-container *ngIf="formulario.controls['cpf']?.invalid">
+        <small *ngIf="formulario.controls['cpf']?.touched">*CPF Obrigatório</small>
+        <small *ngIf="formulario.controls['cpf']?.dirty">*Campo Obrigatório</small>
+      </ng-container>
     </div>
 
     <div>
-      <label for="inputDataNascimento" class="col-form-label"
+      <label for="inputDataNascimento"
         >Data de Nascimento: <span>*</span>
       </label>
       <input
@@ -58,19 +58,19 @@
         placeholder=" Data de nascimento"
         mask="00/00/0000"
       />
+      <ng-container *ngIf="formulario.controls['dataNascimento']?.invalid">
+        <small *ngIf="formulario.controls['dataNascimento']?.touched">
+          *Data Nascimento Obrigatório
+        </small>
+        <small *ngIf="formulario.controls['dataNascimento']?.dirty">
+          *Campo Obrigatório
+        </small>
+      </ng-container>
     </div>
 
-    <div *ngIf="formulario.controls['dataNascimento']?.invalid">
-      <p *ngIf="formulario.controls['dataNascimento']?.touched">
-        *Data Nascimento Obrigatório
-      </p>
-      <p *ngIf="formulario.controls['dataNascimento']?.dirty">
-        *Campo Obrigatório
-      </p>
-    </div>
 
     <div>
-      <label for="inputTelefone" class="col-form-label"
+      <label for="inputTelefone"
         >Telefone: <span>*</span>
       </label>
       <input
@@ -80,14 +80,14 @@
         placeholder=" Telefone"
         mask="(00) 0 0000-0000"
       />
+      <ng-container *ngIf="formulario.controls['telefone']?.invalid">
+        <small *ngIf="formulario.controls['telefone']?.touched">
+          *Telefone Obrigatório
+        </small>
+        <small *ngIf="formulario.controls['telefone']?.dirty">*Campo Obrigatório</small>
+      </ng-container>
     </div>
 
-    <div *ngIf="formulario.controls['telefone']?.invalid">
-      <p *ngIf="formulario.controls['telefone']?.touched">
-        *Telefone Obrigatório
-      </p>
-      <p *ngIf="formulario.controls['telefone']?.dirty">*Campo Obrigatório</p>
-    </div>
 
     <div>
       <button

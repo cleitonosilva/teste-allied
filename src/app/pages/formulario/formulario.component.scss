@@ -13,7 +13,7 @@
     border: 1px solid;
 
     div{
-      // margin-bottom: 20px;
+      margin-bottom: 10px;
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -41,6 +41,11 @@
 
       }
 
+      small{
+        color: #f03a3a;
+        margin-top: 2px;
+      }
+
       button{
         &:disabled{
           height: 40px;
@@ -53,10 +58,7 @@
         }
       }
 
-
     }
-
-
   }
 
 
